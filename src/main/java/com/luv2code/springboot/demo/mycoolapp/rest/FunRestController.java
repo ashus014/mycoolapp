@@ -12,6 +12,19 @@ public class FunRestController {
     @GetMapping("/")
     public String sayHello(){
 
-        return "Hello World! Time on the server is : " + LocalDateTime.now();
+        return "Hello Ashu! Time on the server is : " + LocalDateTime.now();
+    }
+
+    //expose a new endpoint for "workout"
+    @GetMapping("/workout")
+    public String getDailyWorkout(){
+
+        return "Run hard 5k";
+    }
+
+    @GetMapping("/fortune")
+    public String getDailyFortune(){
+
+        return "Today is your lucky day";
     }
 }
